@@ -3,15 +3,15 @@ function res = kMeans(data, k, opt)
 % Authors: 
 %   Bohui WU, Rui LIU
 % Arguments:
-%   data: The data with shape (m, n) where n is the numebr of dimensions
+%   data: The data with shape (m, n) where n is the number of dimensions
 %   k: The number of clusters
 %   options (optional): The options struct containing additional
 %       information. Here are the available options
 %       randomInit: true or false (default: true). In such cases, provide
 %       the 'centroids'.
 %       centroids: The initial centroids.
-%       randomMethod: random method (default: random). 
-%           1. random: Randomly initilize to values between min and
+%       randomMethod: random method (default: randomPoints). 
+%           1. random: Randomly initialize to values between min and
 %              max.
 %           2. randomPoints: Randomly choose points in the data set.
 %       closenessMetric: Here are the available options
@@ -21,7 +21,7 @@ function res = kMeans(data, k, opt)
 % Handle default values
 if nargin < 3
     opt.randomInit = true;
-    opt.randomMethod = 'random';
+    opt.randomMethod = 'randomPoints';
 end
 if ~isfield(opt, 'closenessMetric')
     opt.closenessMetric = 'euclidean';
