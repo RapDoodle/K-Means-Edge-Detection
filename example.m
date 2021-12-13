@@ -13,12 +13,12 @@ imshow(img);
 % This is just part of our assignment. Feel free to ignore ths section.
 % It has nothing to do with image segmentation
 % Perform image segmentation
-k = 16;
+k = 4;
 imgSeg = imageSegmentation(img, k);
 
 % Show the segmented image
 figure
-imshow(imgOut);
+imshow(imgSeg);
 title('k = ' + string(k));
 
 %% Perform Edge Detection
@@ -27,3 +27,4 @@ mask = edgeDetection(img);
 
 % Plot the original image along with the mask
 imgMergePlot(img, ones(size(img)).*mask);
+
