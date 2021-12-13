@@ -1,5 +1,9 @@
 # Figuers (images contained may be copyrighted)
 images/
+figures/
+
+# MATLAB Drive
+.MATLABDriveTag
 
 # Windows default autosave extension
 *.asv
